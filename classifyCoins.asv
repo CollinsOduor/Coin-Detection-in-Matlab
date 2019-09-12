@@ -1,0 +1,23 @@
+function [one_bob, five_bob, ten_bob, twenty_bob, forty_bob, value] = classifyCoins(radius)
+    one_bob = 0;
+    five_bob = 0;
+    ten_bob = 0;
+    twenty_bob = 0;
+    forty_bob = 0;
+    
+    for i=1:numel(radius(:,1))
+        if radii(i)<=336.5220111
+            five_bob = five_bob+1;
+        elseif radius(i)<=405.7773459
+            sh10 = sh10+1;
+        elseif radius(i)<=414.9466707
+            sh1 = sh1+1;
+        elseif radius(i)<=480.1206565
+            sh20 = sh20+1;
+        elseif radius(i)<=530.0675983
+            sh40 = sh40+1;
+        end
+    value=sh1*1+sh20*20+sh10*10+sh40*40+five_bob*5;
+    pause(2);
+    end
+end

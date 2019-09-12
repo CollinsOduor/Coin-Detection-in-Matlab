@@ -1,0 +1,16 @@
+function y = histEqualization(coins)
+    coins_eq = histeq(coin);
+    figure(1)
+    subplot(2,2,1);
+    imshow(coins);
+    title('Original Image')
+    subplot(2, 2, 2)
+    imhist(coins);
+    title('Histogram of intensity for Original Image')
+    subplot(2, 2, 3);
+    imshow(coins_eq);
+    title('Original Image')
+    subplot(2, 2, 4)
+    imhist(coins_eq);
+end
+
